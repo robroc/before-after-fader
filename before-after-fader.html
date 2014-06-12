@@ -5,19 +5,22 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 <style>
-    #container {position: relative}
+    .container {position: relative; overflow:hidden}
 
-    #container img {
+    .container img {
         width: 100%;
+    }
+    
+    .container img:nth-child(2) {
         position: absolute;
         top: 0;
         left: 0
-    }
+    }    
 </style>
   
 <script>
     $(function(){
-        $('#container').click( function() {
+        $('.container').click( function() {
             $('img:last', this).fadeToggle(1500, "linear");           
         })       
     });
@@ -27,11 +30,20 @@
 
 <body>
 
-    <div id="container">  
-           <img src="Fire10.jpg">
-           <img src="Fire11.jpg">  
+ <div id="wrapper">
+
+    <div class="container">  
+           <img src="image1.jpg">
+           <img src="image2.jpg">  
     </div>  
-  
+         
+       
+    <div class="container">  
+           <img src="image3.jpg">
+           <img src="image4.jpg">  
+    </div>  
+
+</div>    
 
 <body>
 </html>
